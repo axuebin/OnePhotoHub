@@ -31,13 +31,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+$height: 667px;
 #app {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    height: 667px;
+    height: $height;
 }
 .main .footer {
     position: absolute;
@@ -45,7 +46,7 @@ export default {
     right: 0;
 }
 .main {
-    height: 600px;
+    height: $height - 67;
     bottom: 67px;
     overflow: auto;
     background-color: rgba(179, 177, 177, 0.1)

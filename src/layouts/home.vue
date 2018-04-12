@@ -59,14 +59,17 @@ export default {
     background-color: white;
     margin-top: 10px;
     .photo-area {
-        height: 200px;
-        position: relative;
-        overflow: hidden;
+        // height: 200px;
+        // position: relative;
+        // overflow: hidden;
+        // img {
+        //     width: 100%;
+        //     position: absolute;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        // }
         img {
             width: 100%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
         }
     }
     .photo-name, .photo-uploader {
