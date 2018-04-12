@@ -1,7 +1,7 @@
 {
-  "name": "vue2-500pxme",
+  "name": "one-photo-hub",
   "version": "1.0.0",
-  "description": "500px.me with vue2",
+  "description": "OnePhotoHub with vue2",
   "author": "axuebin",
   "private": true,
   "scripts": {

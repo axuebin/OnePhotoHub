@@ -1,6 +1,6 @@
-# vue2-500pxme
+# OnePhotoHub
 
-> 500px.me with vue2
+> OnePhotoHub with vue2
 
 ## Build Setup
 
