@@ -36,6 +36,9 @@ export default {
     .tab-item-icon {
         height: 45px;
         line-height: 45px;
+        :hover {
+            background-color: transparent;
+        }
         .iconfont {
             font-size: 25px;
         }
