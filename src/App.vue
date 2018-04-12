@@ -4,18 +4,29 @@
             <router-view/>
         </div>
         <footer class="footer">
-            <tab-bar/>
+            <tab-bar :data="tabbarData"/>
         </footer>
     </div>
 </template>
 
 <script>
 import TabBar from './components/TabBar/index';
+import { getTabbar } from './lib/service';
 
 export default {
     name: 'App',
+    data() {
+        return {
+            tabbarData: [],
+        };
+    },
     components: {
         'tab-bar': TabBar,
+    },
+    mounted() {
+        getTabbar().then((response) => {
+            this.tabbarData = response.data;
+        });
     },
 };
 </script>
