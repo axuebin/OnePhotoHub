@@ -9,7 +9,14 @@
             </div>
         </div>
         <div class="follow">
-            <button><i class="iconfont icon-zengjia">  关注</i></button>
+            <button class="followed"
+                v-if="data.uploader.isFollowed"
+                @click="this.handleFollowClick">
+                <i class="iconfont icon-biaodankongjiandanxuan">  已关注</i>
+            </button>
+            <button class="unfollow" v-else @click="this.handleFollowClick">
+                <i class="iconfont icon-zengjia">  关注</i>
+            </button>
         </div>
     </div>
 </template>
@@ -19,6 +26,11 @@ export default {
     name: 'UploaderBar',
     props: {
         data: Object,
+    },
+    methods: {
+        handleFollowClick() {
+            this.data.uploader.isFollowed = !this.data.uploader.isFollowed;
+        },
     },
 };
 </script>
@@ -39,7 +51,7 @@ export default {
         .avatar{
             width: 40px;
             height: 40px;
-            background-color: rgba(179, 177, 177, 0.1);
+            background-color: rgba(179, 177, 177, 0.102);
             margin-right: 10px;
             img {
                 width: 100%;
@@ -54,14 +66,25 @@ export default {
         justify-content: flex-end;
         align-items: center;
         button {
+            width: 80px;
+            height: 30px;
             border-color: #0099e5;
             color: #0099e5;
             background-color: white;
-            height: 30px;
             border-radius: 3px;
             i {
                 font-size: 12px;
                 margin: 0px 10px;
+            }
+            &.followed {
+                border-color: rgba(0, 0, 0, 0.5);
+                color: rgba(0, 0, 0, 0.5);
+                background-color: white;
+            }
+            &.unfollow {
+                border-color: #0099e5;
+                color: #0099e5;
+                background-color: white;
             }
         }
     }
