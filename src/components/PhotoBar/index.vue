@@ -1,5 +1,5 @@
 <template>
-    <div class="photo-name">
+    <div class="photo-bar">
         <div class="name">
             {{data.name}}
         </div>
@@ -7,12 +7,10 @@
             <i :class="['iconfont',
                         {'icon-xihuan': !data.isLiked},
                         {'icon-xihuan1': data.isLiked}]"
-                @click="this.handleLikeClick">
-                <span>{{data.like}}</span>
-            </i>
-            <i class="iconfont icon-xiaoxi">
-                <span>{{data.comment}}</span>
-            </i>
+                @click="this.handleLikeClick"></i>
+            <span>{{data.like}}</span>
+            <i class="iconfont icon-xiaoxi"></i>
+            <span>{{data.comment}}</span>
             <i :class="['iconfont',
                         {'icon-shoucang': !data.isCollected},
                         {'icon-shoucang1': data.isCollected}]"
@@ -45,14 +43,14 @@ export default {
 </script>
 
 <style lang="scss">
-.photo-name {
+.photo-bar {
     height: 50px;
     font-size: 16px;
     line-height: 50px;
     padding: 0px 10px;
     display: flex;
 }
-.photo-name  {
+.photo-bar  {
     .name, .control{
         flex: 1;
     }
@@ -64,11 +62,10 @@ export default {
             font-size: 20px;
             display: flex;
             align-items: center;
-            span {
-                color: black !important;
-                padding-left: 5px;
-                font-size: 12px;
-            }
+        }
+        span {
+            padding-left: 5px;
+            font-size: 12px;
         }
         .icon-xihuan1 {
             color: #ff4c4c;

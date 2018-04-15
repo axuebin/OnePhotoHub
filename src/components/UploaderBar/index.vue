@@ -2,7 +2,7 @@
     <div class="photo-uploader">
         <div class="username">
             <div class="avatar">
-                <img src="../../../../assets/avatar.jpeg">
+                <img src="../../assets/avatar.jpeg">
             </div>
             <div>
                 {{data.uploader.userName}}

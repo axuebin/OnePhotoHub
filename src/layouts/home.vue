@@ -3,7 +3,7 @@
         <div class="photo" v-for="photo in photos" :key="photo.id">
             <uploader-bar :data="photo"/>
             <div class="photo-area">
-                <img :src="photo.url">
+                <img :src="photo.url" @click="() => toPhotoDetail(photo)">
             </div>
             <photo-bar :data="photo"/>
         </div>
@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import UploaderBar from '../components/Home/Photo/UploaderBar/index';
-import PhotoBar from '../components/Home/Photo/PhotoBar/index';
+import UploaderBar from '../components/UploaderBar/index';
+import PhotoBar from '../components/PhotoBar/index';
 import { getRecentPhotos } from '../lib/service';
 
 export default {
@@ -30,6 +30,12 @@ export default {
         getRecentPhotos().then((response) => {
             this.photos = response.data;
         });
+    },
+    methods: {
+        toPhotoDetail(photo) {
+            window.sessionStorage.setItem('photo', JSON.stringify(photo));
+            window.router.push({ path: 'photo', query: { photoId: photo.id } });
+        },
     },
 };
 </script>

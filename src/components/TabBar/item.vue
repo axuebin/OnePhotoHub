@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         onClick() {
-            global.router.push(this.data.url);
+            window.router.push(this.data.url);
         },
     },
 };
@@ -40,7 +40,7 @@ export default {
             background-color: transparent;
         }
         .iconfont {
-            font-size: 25px;
+            font-size: 24px;
         }
     }
     .tab-item-text {

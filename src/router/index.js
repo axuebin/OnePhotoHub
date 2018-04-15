@@ -5,6 +5,8 @@ import Search from '../layouts/search';
 import Notice from '../layouts/notice';
 import Me from '../layouts/me';
 
+import PhotoDetail from '../components/PhotoDetail/index';
+
 Vue.use(Router);
 
 export default new Router({
@@ -28,6 +30,11 @@ export default new Router({
             path: '/me',
             name: 'Me',
             component: Me,
+        },
+        {
+            path: '/photo',
+            name: 'PhotoDetail',
+            component: PhotoDetail,
         },
     ],
 });
