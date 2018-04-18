@@ -9,3 +9,4 @@ if (isMock) {
 
 export const recentPhotosPath = `${url}/recentphotos`;
 export const tabbarPath = `${url}/tabbar`;
+export const userPhotosPath = `${url}/photos`;

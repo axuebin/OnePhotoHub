@@ -1,12 +1,13 @@
 <template>
-    <div>me</div>
+    <User />
 </template>
 
 <script>
+import User from '../components/User/index';
+
 export default {
-    name: 'Me',
+    components: {
+        User,
+    },
 };
 </script>
-
-<style scoped>
-</style>
